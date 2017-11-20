@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#b7b6b6"
+        android:paddingTop="5dp">
+
+        <RadioGroup
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_shop_close"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/shop_close"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="#ccc6c6" />
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/abc"
+            android:hint="搜索京东商品/店铺" />
+
+        <RadioGroup
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <CheckBox
+                android:id="@+id/rb_change"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rb_qiehuan"
+                android:button="@null"
+                android:checked="false"
+                android:textColor="#ccc6c6" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="综合"
+                android:textColor="@drawable/shopcheckbox"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="销量"
+                android:textColor="@drawable/shopcheckbox"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="价格"
+                android:textColor="@drawable/shopcheckbox"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="筛选"
+                android:textColor="@drawable/shopcheckbox"
+                android:textSize="20sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shop_text_biaoti"
+            android:gravity="center"
+            android:text="京东配送"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shop_text_biaoti"
+            android:gravity="center"
+            android:text="品牌"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/shop_text_biaoti"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="1"
+            android:maxLines="1"
+            android:text="前置摄像头"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shop_text_biaoti"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="1"
+            android:maxLines="1"
+            android:text="后置摄像头"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <com.bawei.swiperefreshlayoutlibrary.SwipyRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_shop_shoplist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </com.bawei.swiperefreshlayoutlibrary.SwipyRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#72AAC3"
+        android:paddingTop="5dp">
+
+        <RadioGroup
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rp_sao_qr"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/as5"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="#ccc6c6" />
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/abc" />
+
+        <RadioGroup
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <RadioButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/xiaoxi"
+                android:button="@null"
+                android:textColor="#ccc6c6" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#F3F5F7"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/left_recyclerview"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/left_recyclerview_son"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F3F5F7"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

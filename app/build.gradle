@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.zuiyou.jd"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile project(':QRcCodeScanLibrary')
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile 'org.xutils:xutils:3.5.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile project(':swiperefreshlayoutlibrary')
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.github.ctiao:DanmakuFlameMaster:0.5.3'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //    高仿微信底部栏，简单实用易理解
+    compile 'com.yinglan.alphatabs:library:1.0.8'
+}

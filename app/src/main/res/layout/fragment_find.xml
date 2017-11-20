@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingTop="5dp">
+
+        <RadioGroup
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rp_sao_qr"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/as5"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="#ccc6c6" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:text="发现"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <RadioGroup
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <RadioButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/xiaoxi"
+                android:button="@null"
+                android:textColor="#ccc6c6" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+</LinearLayout>
